@@ -37,7 +37,15 @@ A modern web application for citizens to submit and track complaints about publi
 - `DELETE /api/users/:id`: Admin delete user
 
 ## Demo
-[Live Demo Link](#) (to be updated after deployment)
+## Demo
+- **Live Demo**: [https://ccaes.vercel.app]
+- **Backend API**: [https://ccaes.onrender.com]  
+   
+   you can use this command in your terminal to check the backend apis:  curl -X POST https://ccaes.onrender.com/api/auth/signup -H "Content-Type: application/json" -d '{"name":"Test User","email":"test23@example.com","password":"password123"}'
+
+   
+- **Demo Video**: [https://youtu.be/uEe74EwwyrM]
+[Live Demo Link]
 
 ## Screenshots
 ![Home Page](images/1.png)
@@ -50,6 +58,7 @@ A modern web application for citizens to submit and track complaints about publi
 
 
 ## Architecture
+- **Database used**: mongodb online 
 - **Frontend**: React with Bootstrap for responsive UI.
 - **Backend**: RESTful API with MongoDB for data storage.
 - **Authentication**: JWT-based secure access.
