@@ -11,7 +11,7 @@ function UserDashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/complaints', form, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/complaints`, form, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTicketId(res.data.ticketId);
@@ -24,7 +24,7 @@ function UserDashboard() {
 
   const fetchComplaints = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/complaints/history', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/complaints/history`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setComplaints(res.data);

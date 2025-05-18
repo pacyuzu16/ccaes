@@ -12,7 +12,7 @@ function AdminDashboard() {
 
   const fetchComplaints = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/complaints', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/complaints`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setComplaints(res.data);
@@ -23,7 +23,7 @@ function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUsers(res.data);
@@ -34,7 +34,7 @@ function AdminDashboard() {
 
   const handleUpdateComplaint = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/complaints/${selectedComplaint._id}`, form, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/complaints/${selectedComplaint._id}`, form, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setShowModal(false);
@@ -50,7 +50,7 @@ function AdminDashboard() {
       if (userForm.name) updateData.name = userForm.name;
       if (userForm.email) updateData.email = userForm.email;
       if (userForm.password) updateData.password = userForm.password;
-      await axios.put(`http://localhost:5000/api/users/${userId}`, updateData, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/users/${userId}`, updateData, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       fetchUsers();
@@ -63,7 +63,7 @@ function AdminDashboard() {
   const handleDeleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/${userId}`, {
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/${userId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         fetchUsers();
