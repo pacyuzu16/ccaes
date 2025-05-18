@@ -62,7 +62,7 @@ A modern web application for citizens to submit and track complaints about publi
 - **Frontend**: React with Bootstrap for responsive UI.
 - **Backend**: RESTful API with MongoDB for data storage.
 - **Authentication**: JWT-based secure access.
-- **Diagram**: [Add draw.io link or embed image]
+  
 
 ## Deployment
 - **Frontend**: Vercel
