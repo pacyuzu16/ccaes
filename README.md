@@ -42,6 +42,8 @@ A modern web application for citizens to submit and track complaints about publi
 - **Backend API**: [https://ccaes.onrender.com]  
    
    you can use this command in your terminal to check the backend apis:  curl -X POST https://ccaes.onrender.com/api/auth/signup -H "Content-Type: application/json" -d '{"name":"Test User","email":"test23@example.com","password":"password123"}'
+## Sample
+![Home Page](images/2222.png)
 
    
 - **Demo Video**: [https://youtu.be/uEe74EwwyrM]
@@ -62,7 +64,7 @@ A modern web application for citizens to submit and track complaints about publi
 - **Frontend**: React with Bootstrap for responsive UI.
 - **Backend**: RESTful API with MongoDB for data storage.
 - **Authentication**: JWT-based secure access.
-  
+
 
 ## Deployment
 - **Frontend**: Vercel
